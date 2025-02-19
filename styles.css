@@ -6,10 +6,20 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #001f3d; /* Navy Blue Background */
   color: #fff;
   line-height: 1.6;
+}
+
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+  background-color: #003366; /* Dark Navy */
 }
 
 /* Header Styles */
@@ -31,6 +41,55 @@ header h1 {
 header p {
   font-size: 18px;
   color: #fff;
+}
+
+/* Navbar - Left section */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left h1 {
+  color: #ffcc00;
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Navbar - Right section (links) */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Make the buttons stacked under the name on the index page */
+body.index-page nav .nav-right {
+  flex-direction: column; /* Stack the buttons vertically */
+  margin-top: 10px; /* Space between name and buttons */
+}
+
+/* Default layout for the about.html and blog.html pages */
+body.about-page nav .nav-right,
+body.blog-page nav .nav-right {
+  flex-direction: row; /* Buttons aligned horizontally */
+}
+
+/* Navbar - Right section links */
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-left: 20px;
+  transition: background-color 0.3s;
+}
+
+.nav-right a.cta-button {
+  background-color: #ffcc00;
+  border-radius: 5px;
+}
+
+.nav-right a.cta-button:hover {
+  background-color: #e0a800;
 }
 
 /* Container for Content */
@@ -250,4 +309,66 @@ header p {
   header h1 {
     font-size: 28px;
   }
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-right a {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Initially hide the profile picture on all pages */
+#profile-picture {
+  display: none;
+}
+
+/* Show the profile picture only on the index.html */
+body.index-page #profile-picture {
+  display: block;
+}
+
+/* Hide the profile picture on blog.html */
+body.blog-page #profile-picture {
+  display: none;
+}
+
+/* Center all text in the blog section */
+.blog {
+  text-align: center;
+  max-width: 800px; /* Ensure the blog content does not stretch too wide */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px;
+}
+
+/* Center the blog post headings */
+.blog-post h3 {
+  text-align: center;
+}
+
+/* Center the paragraph text inside the blog post */
+.blog-post p {
+  text-align: center;
+}
+
+/* Center the "Read More" button */
+.read-more-btn {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Optional: Center the footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
 }

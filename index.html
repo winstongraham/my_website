@@ -7,27 +7,39 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font POPPINS from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <body class="index-page">
+        <!-- Rest of the content -->
+    </body>
     <!-- Header Section -->
-    <header>
-        <div class="header-content">
+    <header> 
+        <nav>
+          <div class="nav-left">
             <!-- Make the h1 clickable to go back to the homepage -->
             <a href="index.html"><h1>Winston Graham</h1></a>
-            <p>Aspiring Data Engineer</p>
-
+          </div>
+      
+          <div class="nav-right">
             <!-- "About Me" Button -->
             <a href="about.html" class="cta-button">About</a>
-
-             <!-- Blog Button -->
-             <a href="blog.html" class="cta-button">Blog</a>
-        </div>
-
+      
+            <!-- Blog Button -->
+            <a href="blog.html" class="cta-button">Blog</a>
+          </div>
+        </nav>
+      
         <!-- Profile Picture Section -->
         <div class="profile-section">
-            <img src="winston.jpg" alt="Winston Graham" class="profile-pic">
+          <img src="winston.jpg" alt="Winston Graham" class="profile-pic">
         </div>
-    </header>
+      </header>
+      
 
     <div class="container">
         <!-- About Me Section -->
@@ -47,6 +59,12 @@
                 <a href="https://github.com/winstongraham" target="_blank" class="github-btn">
                     <i class="fab fa-github"></i> <!-- GitHub Icon -->
                 </a>
+
+               <!---- Mail Button -->
+                <a href="mailto:winstonkingraham@gmail.com" a>
+                    <i class="fa-solid fa-envelope"></i> <!-- GitHub Icon -->
+                </a>
+
             </div>
         </section>
     </div>
