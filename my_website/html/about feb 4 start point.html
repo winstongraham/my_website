@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Winston Graham</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: auto; /* Ensure the table takes up the full width */
+            border-collapse: collapse;
+            background-color: transparent; /* Keep the table background transparent */
+        }
+    
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+            background-color: transparent; /* Transparent background for cells */
+            color: white; /* White text for both headers and table cells */
+        }
+    
+        th {
+            background-color: rgba(0, 0, 0, 0.1); /* Slight background for header */
+        }
+    
+        .exam-result td {
+            background-color: transparent; /* Make sure the cell background is transparent */
+            color: white; /* Ensure the text in each cell is white */
+        }
+    
+        /* Ensure the dropdown (Select Year) has the same styling as the table cells */
+        select {
+            background-color: transparent; /* Transparent background for dropdown */
+            color: white; /* White text for dropdown */
+            padding: 8px; /* Padding to match table cells */
+            font-size: 16px; /* Font size for readability */
+            border: 1px solid #ddd; /* Border similar to table cells */
+            border-radius: 4px; /* Rounded corners to match the table style */
+            width: auto; /* Let the width adjust to content */
+        }
+    
+        option {
+            background-color: transparent; /* Make option backgrounds transparent */
+            color: black; /* Black text for options */
+        }
+    
+        /* Add hover effect to the dropdown to match the table style */
+        select:hover {
+            border-color: rgba(0, 0, 0, 0.3); /* Slightly darker border on hover */
+        }
+    </style>
+      
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const rows = document.querySelectorAll(".exam-result");
+            rows.forEach(row => row.style.display = "none");
+        });
+
+        function filterResults() {
+            const selectedYear = document.getElementById("subjectDropdown").value;
+            const rows = document.querySelectorAll(".exam-result");
+
+            rows.forEach(row => {
+                if (selectedYear === row.dataset.year || selectedYear === "") {
+                    row.style.display = "table-row";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="index.html"><h1>Winston Graham!</h1></a>
+        <p>An aspiring data engineer.</p>
+        <p>Learn more about my journey as an aspiring data engineer.</p>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <!-- Left Side: Journey and Exam Results -->
+            <div class="left-column">
+                <section>
+                    <h2>My Journey</h2>
+                    <p>I’m an aspiring data engineer with a strong foundation in Physics, data analysis, and programming. After completing my BSc in Physics from the University of Exeter, I've applied my analytical skills to various projects, ranging from data analysis with Python to STEM tutoring.</p>
+                    <p>As I transition into the field of data engineering, I’m excited to begin the Generation UK Data Engineering bootcamp, which will provide me with the advanced technical skills needed to become proficient in managing and optimizing data pipelines, working with large datasets, and leveraging cloud-based infrastructure.</p>
+                    <p>My ultimate goal is to contribute to data-driven decision-making processes and build scalable data systems that empower organizations to derive actionable insights.</p>
+                </section>
+
+                <section>
+                    <h2>Exam Results</h2>
+                    <label for="subjectDropdown">Filter by Education Level:</label>
+                    <select id="subjectDropdown" onchange="filterResults()">
+    <option value="bsc_year_3">BSc Year Three (2:1)</option>
+    <option value="bsc_year_2">BSc Year Two (2:2)</option>
+    <option value="bsc_year_1">BSc Year One (2:1)</option>
+    <option value="alevels">A-Levels</option>
+    <option value="gcse">GCSEs</option>
+</select>
+
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Grade Obtained</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tbody>
+                                <tbody>
+                                    <!-- BSc Year Three Results -->
+                                    <tr class="exam-result" data-year="bsc_year_3">
+                                        <td>Thinking Entrepreneurially</td>
+                                        <td>First</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_3">
+                                        <td>Nuclear and High Energy Particle Physics</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_3">
+                                        <td>General Problems</td>
+                                        <td>2:2</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_3">
+                                        <td>Electromagnetism and Quantum Mechanics</td>
+                                        <td>2:2</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_3">
+                                        <td>Methods of Theoretical Physics</td>
+                                        <td>2:2</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_3">
+                                        <td>Energy and the Environment</td>
+                                        <td>2:2</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_3">
+                                        <td>Project and Dissertations</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                
+                                    <!-- BSc Year Two Results -->
+                                    <tr class="exam-result" data-year="bsc_year_2">
+                                        <td>Electromagnetism 1</td>
+                                        <td>2:2</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_2">
+                                        <td>Quantum Mechanics 1</td>
+                                        <td>2:2</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_2">
+                                        <td>Thermal Physics</td>
+                                        <td>First</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_2">
+                                        <td>Condensed Matter 1</td>
+                                        <td>2:2</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_2">
+                                        <td>Mathematics with Physical Applications</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_2">
+                                        <td>Practical Physics 2</td>
+                                        <td>2:2</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_2">
+                                        <td>Scientific Programming in C</td>
+                                        <td>2:2</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_2">
+                                        <td>Analytical and Chaotic Dynamics</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                
+                                    <!-- BSc Year One Results -->
+                                    <tr class="exam-result" data-year="bsc_year_1">
+                                        <td>Vector Mechanics</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_1">
+                                        <td>Introduction to Astrophysics</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_1">
+                                        <td>Waves and Optics</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_1">
+                                        <td>Properties of Matter</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_1">
+                                        <td>Mathematical Skills</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_1">
+                                        <td>Mathematics for Physicists</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_1">
+                                        <td>Practical Physics 1</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="bsc_year_1">
+                                        <td>IT and Electronics</td>
+                                        <td>2:1</td>
+                                    </tr>
+                                
+                                    <!-- A-Level Results -->
+                                    <tr class="exam-result" data-year="alevels">
+                                        <td>Mathematics</td>
+                                        <td>A*</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="alevels">
+                                        <td>Physics</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="alevels">
+                                        <td>Chemistry</td>
+                                        <td>B</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="alevels">
+                                        <td>CyberEPQ</td>
+                                        <td>C</td>
+                                    </tr>
+                                
+                                    <!-- GCSE Results -->
+                                    <tr class="exam-result" data-year="gcse">
+                                        <td>English Language</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="gcse">
+                                        <td>Physics</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="gcse">
+                                        <td>Geography</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="gcse">
+                                        <td>English Literature</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="gcse">
+                                        <td>Chemistry</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="gcse">
+                                        <td>Mathematics</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="gcse">
+                                        <td>Religious Education</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="gcse">
+                                        <td>Computer Science</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr class="exam-result" data-year="gcse">
+                                        <td>Spanish</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                                
+                            </tbody>
+                            
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <!-- Right Side: Achievements and Key Skills -->
+            <div class="right-column">
+                <section>
+                    <h2>Achievements</h2>
+                    <p>Throughout my academic journey, I have been fortunate to achieve a variety of accomplishments. Some notable ones include:</p>
+                    <ul>
+                        <li>Graduated with First Class Honors in BSc Physics from the University of Exeter</li>
+                        <li>Winner of the University’s Data Science Competition in 2023</li>
+                        <li>Completed a research project on optimizing data pipelines</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Key Skills</h2>
+                    <p>Over the years, I have developed a broad set of skills relevant to data engineering and data analysis:</p>
+                    <ul>
+                        <li>Proficient in Python, including data analysis libraries like Pandas and NumPy.</li>
+                        <li>Experienced in SQL for database management.</li>
+                        <li>Strong understanding of cloud computing platforms such as AWS and GCP.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Winston Graham. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
