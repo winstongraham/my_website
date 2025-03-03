@@ -59,18 +59,7 @@ header p {
 .nav-right {
   display: flex;
   align-items: center;
-}
-
-/* Make the buttons stacked under the name on the index page */
-body.index-page nav .nav-right {
-  flex-direction: column; /* Stack the buttons vertically */
-  margin-top: 10px; /* Space between name and buttons */
-}
-
-/* Default layout for the about.html and blog.html pages */
-body.about-page nav .nav-right,
-body.blog-page nav .nav-right {
-  flex-direction: row; /* Buttons aligned horizontally */
+  margin-left: auto; /* Pushes the right section to the far right */
 }
 
 /* Navbar - Right section links */
