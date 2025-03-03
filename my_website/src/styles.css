@@ -361,3 +361,20 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+
+/* Remove default link colors */
+a:link, a:visited {
+    color: inherit; /* Inherit color from parent or set to a custom color */
+    text-decoration: none; /* Remove underlines */
+}
+
+/* Hover effect */
+a:hover {
+    color: #ffcc00; /* Hover color */
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Active effect */
+a:active {
+    color: #ffcc00; /* Active color */
+}
