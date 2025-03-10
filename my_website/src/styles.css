@@ -5,11 +5,22 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
   background-color: #001f3d; /* Navy Blue Background */
   color: #fff;
   line-height: 1.6;
+}
+
+main {
+  flex: 1;
+  margin-top: 20px; /* Add margin to create a gap between the nav and main content */
 }
 
 /* Navbar Styles */
