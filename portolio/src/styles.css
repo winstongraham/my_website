@@ -33,6 +33,27 @@ nav {
   background-color: #003366; /* Dark Navy */
 }
 
+/* Header Styles */
+header {
+  background-color: #003366; /* Dark Navy */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #ffcc00; /* Accent Color */
+  margin-right: 20px;
+}
+
+header p {
+  font-size: 18px;
+  color: #fff;
+}
+
 /* Navbar - Left section */
 .nav-left {
   display: flex;
@@ -163,8 +184,6 @@ footer p {
   object-fit: cover; /* Ensure the image doesn't stretch/distort */
   margin-top: 20px; /* Add some space above the image */
   border: 5px solid #ffcc00; /* Optional: yellow border around the image */
-  display: flex;
-  justify-content: left; /* Align the profile picture to the left */
 }
 
 /* Social Media Buttons */
@@ -277,33 +296,9 @@ header p {
 }
 
 /* Mobile responsiveness: Stacking columns vertically */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .content {
     flex-direction: column;
-  }
-
-  .profile-pic {
-    display: block;
-    margin: 0 auto 20px auto; /* Center the profile picture and add margin below */
-  }
-
-   /* Ensure the intro section displays correctly on smaller screens */
-   .intro {
-    display: flex;
-    flex-direction: column; /* Stack the elements vertically */
-    text-align: center; /* Center the text in the intro section */
-    margin-top: 20px; /* Add margin above the intro section */
-  }
-
-  /* Adjust the heading size for mobile */
-  .intro h2 {
-    font-size: 28px;
-  }
-
-  /* Optional: Adjust paragraph text size for mobile */
-  .intro p {
-    font-size: 16px; /* Adjust font size for readability */
-    line-height: 1.5; /* Increase line height for readability */
   }
 
   .left-column, .right-column {
@@ -380,17 +375,17 @@ footer {
 
 /* Remove default link colors */
 a:link, a:visited {
-  color: inherit; /* Inherit color from parent or set to a custom color */
-  text-decoration: none; /* Remove underlines */
+    color: inherit; /* Inherit color from parent or set to a custom color */
+    text-decoration: none; /* Remove underlines */
 }
 
 /* Hover effect */
 a:hover {
-  color: #ffcc00; /* Hover color */
-  text-decoration: underline; /* Optional: underline on hover */
+    color: #ffcc00; /* Hover color */
+    text-decoration: underline; /* Optional: underline on hover */
 }
 
 /* Active effect */
 a:active {
-  color: #ffcc00; /* Active color */
+    color: #ffcc00; /* Active color */
 }

@@ -1,0 +1,78 @@
+look more modern, using a bootstrap. 
+readability on different screens
+breakpoints, documentation
+look at different code bases as well
+code snippets, templates
+javascript animations 
+README.md                   
+HUGGINGFACE.CO        
+
+BLOG PAGE TEST BOOTSTRAP
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineering Blog | Winston Graham</title>
+    
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <a href="index.html" class="text-white text-decoration-none"><h1>Winston Graham</h1></a>
+            <nav>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="list-inline-item"><a href="about.html" class="text-white">About Me</a></li>
+                    <li class="list-inline-item"><a href="blog.html" class="text-white">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container py-5">
+        <section class="blog">
+            <h2 class="text-center mb-5">Data Engineering Blog</h2>
+
+            <!-- Blog Post 1 -->
+            <article class="blog-post mb-4">
+                <h3><a href="blog/post1.html" class="text-decoration-none">My First Steps in Data Engineering</a></h3>
+                <p class="post-date text-muted">Posted on February 11, 2025</p>
+                <p>As I embark on my data engineering journey, the initial steps have been both challenging and rewarding...</p>
+                <a href="blog/post1.html" class="btn btn-primary">Read More</a>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post mb-4">
+                <h3><a href="blog/post2.html" class="text-decoration-none">Exploring Data Pipelines with Python</a></h3>
+                <p class="post-date text-muted">Posted on February 5, 2025</p>
+                <p>In the last few weeks, I have spent a lot of time learning how to build and optimize data pipelines...</p>
+                <a href="blog/post2.html" class="btn btn-primary">Read More</a>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-post mb-4">
+                <h3><a href="blog/post3.html" class="text-decoration-none">Cloud Computing: The Backbone of Data Engineering</a></h3>
+                <p class="post-date text-muted">Posted on January 30, 2025</p>
+                <p>Cloud services like AWS and Azure are pivotal to modern data engineering...</p>
+                <a href="blog/post3.html" class="btn btn-primary">Read More</a>
+            </article>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Winston Graham. All rights reserved.</p>
+    </footer>
+
+    <!-- Add Popper.js and Bootstrap JS just before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+                                                  

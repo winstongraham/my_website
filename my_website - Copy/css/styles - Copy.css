@@ -5,70 +5,32 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #001f3d; /* Navy Blue Background */
   color: #fff;
   line-height: 1.6;
 }
 
-main {
-  flex: 1;
-  margin-top: 20px; /* Add margin to create a gap between the nav and main content */
-}
-
-/* Navbar Styles */
-nav {
+/* Header Styles */
+header {
+  background-color: #003366; /* Dark Navy */
+  padding: 20px;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  height: 80px;
-  background-color: #003366; /* Dark Navy */
 }
 
-/* Navbar - Left section */
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.nav-left h1 {
-  color: #ffcc00;
+header h1 {
   font-size: 36px;
-  margin: 0;
+  color: #ffcc00; /* Accent Color */
+  margin-right: 20px;
 }
 
-/* Navbar - Right section (links) */
-.nav-right {
-  display: flex;
-  align-items: center;
-  margin-left: auto; /* Pushes the right section to the far right */
-}
-
-/* Navbar - Right section links */
-.nav-right a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
+header p {
   font-size: 18px;
-  margin-left: 20px;
-  transition: background-color 0.3s;
-}
-
-.nav-right a.cta-button {
-  background-color: #ffcc00;
-  border-radius: 5px;
-}
-
-.nav-right a.cta-button:hover {
-  background-color: #e0a800;
+  color: #fff;
 }
 
 /* Container for Content */
@@ -163,8 +125,6 @@ footer p {
   object-fit: cover; /* Ensure the image doesn't stretch/distort */
   margin-top: 20px; /* Add some space above the image */
   border: 5px solid #ffcc00; /* Optional: yellow border around the image */
-  display: flex;
-  justify-content: left; /* Align the profile picture to the left */
 }
 
 /* Social Media Buttons */
@@ -277,33 +237,9 @@ header p {
 }
 
 /* Mobile responsiveness: Stacking columns vertically */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .content {
     flex-direction: column;
-  }
-
-  .profile-pic {
-    display: block;
-    margin: 0 auto 20px auto; /* Center the profile picture and add margin below */
-  }
-
-   /* Ensure the intro section displays correctly on smaller screens */
-   .intro {
-    display: flex;
-    flex-direction: column; /* Stack the elements vertically */
-    text-align: center; /* Center the text in the intro section */
-    margin-top: 20px; /* Add margin above the intro section */
-  }
-
-  /* Adjust the heading size for mobile */
-  .intro h2 {
-    font-size: 28px;
-  }
-
-  /* Optional: Adjust paragraph text size for mobile */
-  .intro p {
-    font-size: 16px; /* Adjust font size for readability */
-    line-height: 1.5; /* Increase line height for readability */
   }
 
   .left-column, .right-column {
@@ -314,83 +250,4 @@ header p {
   header h1 {
     font-size: 28px;
   }
-
-  nav {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-  }
-
-  .nav-right {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  .nav-right a {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-}
-
-/* Initially hide the profile picture on all pages */
-#profile-picture {
-  display: none;
-}
-
-/* Show the profile picture only on the index.html */
-body.index-page #profile-picture {
-  display: block;
-}
-
-/* Hide the profile picture on blog.html */
-body.blog-page #profile-picture {
-  display: none;
-}
-
-/* Center all text in the blog section */
-.blog {
-  text-align: center;
-  max-width: 800px; /* Ensure the blog content does not stretch too wide */
-  margin: 0 auto; /* Center the content horizontally */
-  padding: 20px;
-}
-
-/* Center the blog post headings */
-.blog-post h3 {
-  text-align: center;
-}
-
-/* Center the paragraph text inside the blog post */
-.blog-post p {
-  text-align: center;
-}
-
-/* Center the "Read More" button */
-.read-more-btn {
-  display: inline-block;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* Optional: Center the footer */
-footer {
-  text-align: center;
-  padding: 20px 0;
-}
-
-/* Remove default link colors */
-a:link, a:visited {
-  color: inherit; /* Inherit color from parent or set to a custom color */
-  text-decoration: none; /* Remove underlines */
-}
-
-/* Hover effect */
-a:hover {
-  color: #ffcc00; /* Hover color */
-  text-decoration: underline; /* Optional: underline on hover */
-}
-
-/* Active effect */
-a:active {
-  color: #ffcc00; /* Active color */
 }
