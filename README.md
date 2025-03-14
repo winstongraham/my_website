@@ -13,7 +13,7 @@ I’m an aspiring data engineer with a strong foundation in Physics, data analys
 - JavaScript (for interactive elements)
 - Git & GitHub (for version control and deployment)
 
-## Features
+## Features 🛠
 
 - **Responsive Design**: The website adjusts to various screen sizes, ensuring a seamless experience on both desktop and mobile devices.
 - **Intro Section**: Introduction to who I am, what I'm passionate about, and my career goals in the field of data engineering.
