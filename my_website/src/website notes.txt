@@ -76,3 +76,7 @@ BLOG PAGE TEST BOOTSTRAP
 </body>
 </html>
                                                   
+#9eeed7
+#9eddee
+#8ed7c2 
+#6dc5b2

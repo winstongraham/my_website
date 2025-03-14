@@ -40,9 +40,15 @@ nav {
 }
 
 .nav-left h1 {
-  color: #ffcc00;
+  color: #9eeed7;
   font-size: 36px;
   margin: 0;
+  transition: transform 0.5s; /* Smooth scaling effect on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.nav-left h1:hover {
+  transform: scale(1.1); /* Enlarge effect on hover */
 }
 
 /* Navbar - Right section (links) */
@@ -59,16 +65,17 @@ nav {
   padding: 10px 20px;
   font-size: 18px;
   margin-left: 20px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.5s; /* Smooth scaling effect on hover */
 }
 
 .nav-right a.cta-button {
-  background-color: #ffcc00;
+  background-color: #9eeed7;
   border-radius: 5px;
 }
 
 .nav-right a.cta-button:hover {
-  background-color: #e0a800;
+  background-color: #5ca394 ;
+  transform: scale(1.1); /* Enlarge effect on hover */
 }
 
 /* Container for Content */
@@ -78,6 +85,8 @@ nav {
   padding: 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Flexbox Layout for Left and Right Columns */
@@ -98,7 +107,7 @@ nav {
 }
 
 h2 {
-  color: #ffcc00;
+  color: #9eeed7;
   text-align: center;
   font-size: 28px;
   margin: 20px 0;
@@ -139,7 +148,7 @@ section {
 }
 
 h2 {
-  color: #ffcc00;
+  color: #9eeed7;
   font-size: 28px;
 }
 
@@ -156,13 +165,14 @@ footer p {
 }
 
 /* Profile Picture Styling */
+
 .profile-pic {
-  width: 450px; /* Set the width of the image */
-  height: 450px; /* Set the height of the image */
+  width: 550px; /* Set the width of the image */
+  height: 550px; /* Set the height of the image */
   border-radius: 50%; /* Make it circular */
   object-fit: cover; /* Ensure the image doesn't stretch/distort */
   margin-top: 20px; /* Add some space above the image */
-  border: 5px solid #ffcc00; /* Optional: yellow border around the image */
+  border: 5px solid #9eeed7; /* Optional: yellow border around the image */
   display: flex;
   justify-content: left; /* Align the profile picture to the left */
 }
@@ -187,11 +197,12 @@ footer p {
   text-align: center;
   line-height: 30px;
   border-radius: 15px; /* Rounded square corners */
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.5s; /* Smooth scaling effect on hover */
 }
 
 .social-buttons a:hover {
   background-color: #005f8c; /* Darker LinkedIn Blue on hover */
+  transform: scale(1.1); /* Enlarge effect on hover */
 }
 
 .github-btn {
@@ -211,7 +222,7 @@ footer p {
 .cta-button {
   font-size: 22px;
   padding: 10px 30px;
-  background-color: #ffcc00;
+  background-color: #9eeed7;
   color: #003366;
   text-decoration: none;
   border-radius: 5px;
@@ -220,7 +231,7 @@ footer p {
 }
 
 .cta-button:hover {
-  background-color: #e0a800;
+  background-color: #5ca394;
 }
 
 /* Drop-down Menu Styling */
@@ -267,13 +278,79 @@ header .header-content {
 
 header h1 {
   font-size: 36px;
-  color: #ffcc00;
+  color: #9eeed7;
   margin-bottom: 10px;
 }
 
 header p {
   font-size: 18px;
   color: #fff;
+}
+
+/* About Me Section */
+.intro {
+  padding: 20px;
+  background-color: #003366;
+  margin: 20px auto; /* Center the intro section horizontally */
+  border-radius: 8px;
+  text-align: center;
+  max-width: 800px; /* Set a maximum width for the intro section */
+  width: 90%; /* Ensure the intro section is responsive */
+}
+
+.intro h2 {
+  color: #9eeed7;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Social Media Buttons (Intro) */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px; /* Ensure equal space between buttons */
+}
+
+.social-buttons a {
+  display: inline-block;
+  background-color: #0077b5; /* LinkedIn Blue */
+  color: #fff;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 15px;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.social-buttons a:hover {
+  background-color: #005f8c;
+  transform: scale(1.1);
+}
+
+.github-btn {
+  background-color: #333;
+}
+
+.github-btn:hover {
+  background-color: #1e1e1e;
+  transform: scale(1.1);
+}
+
+.social-buttons a i {
+  vertical-align: middle;
+  line-height: inherit;
 }
 
 /* Mobile responsiveness: Stacking columns vertically */
@@ -287,8 +364,8 @@ header p {
     margin: 0 auto 20px auto; /* Center the profile picture and add margin below */
   }
 
-   /* Ensure the intro section displays correctly on smaller screens */
-   .intro {
+  /* Ensure the intro section displays correctly on smaller screens */
+  .intro {
     display: flex;
     flex-direction: column; /* Stack the elements vertically */
     text-align: center; /* Center the text in the intro section */
@@ -386,11 +463,11 @@ a:link, a:visited {
 
 /* Hover effect */
 a:hover {
-  color: #ffcc00; /* Hover color */
+  color: #9eeed7; /* Hover color */
   text-decoration: underline; /* Optional: underline on hover */
 }
 
 /* Active effect */
 a:active {
-  color: #ffcc00; /* Active color */
+  color: #9eeed7; /* Active color */
 }
